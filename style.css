@@ -344,6 +344,11 @@
     border-radius: 8px;
     box-shadow: var(--button-shadow);
   }
+
+  .landing-page .input-field-3{
+    display: flex;
+    justify-content: center;
+  }
   
   .landing-page .text-wrapper-6 {
     position: relative;
