@@ -11,44 +11,50 @@
     <div class="landing-page">
       <header class="navigation">
         <img class="element" src="img/2025-06-02-14-36-20-2.png" />
+        
         <div class="items">
           <div class="text-wrapper">Page</div>
           <div class="text-wrapper">Page</div>
           <div class="text-wrapper">Page</div>
         </div>
-        
-       
       </header>
       <div class="div">問い合わせフォーム</div>
       <div class="frame">
-        <div class="textarea-field">
-          <div class="label">問い合わせ内容</div>
-          <div class="textarea">
-            <div class="text-wrapper-2">Value</div>
-            <img class="drag" src="img/drag.svg" />
-          </div>
-        </div>
+        
         <div class="input-field">
           <div class="label-2">性</div>
-          <div class="input"><div class="value">性</div></div>
+          <input class="input" placeholder="性"></inout>
         </div>
         <div class="input-field-2">
           <div class="label-2">名</div>
-          <div class="input"><div class="value">名</div></div>
+          <input class="input" placeholder="名"></inout>
         </div>
-        <div class="frame-2">
-          <div class="text-wrapper-3">性別</div>
-          <div class="radio-button"><img class="icon" src="img/icon.svg" /></div>
-          <div class="text-wrapper-4">男性</div>
-          <div class="icon-wrapper"><img class="icon" src="img/image.svg" /></div>
-          <div class="text-wrapper-5">女性</div>
+
+          <div class="frame-2">
+            <dev class="text-wrapper-3">性別</dev>
+          </div>
+          <div class="frame-sex">
+            <input type="radio" id="men" name="sex"/><label class="text-wrapper-4" for="men">男性</label></input>
+            <input type="radio" id="women" name="sex" /><label class="text-wrapper-5" for="women">女性</label></input>
+          </div>
         </div>
+        <div class="textarea-field">
+          <div class="label">問い合わせ内容</div>
+          <textarea class="textarea" placeholder="問い合わせ内容"></textarea>
+        </div>
+        
+        <div class="input-field-3">
+    
         <button class="button"><div class="text-wrapper-6">送信</div></button>
+        </div>
       </div>
+      
       <div class="footer">
+        <div class="footer-title"> 会社情報</div>
+            <hr>
         <div class="footer-columns">
           <div class="footer-column">
-            <div class="footer-title">会社情報</div>
+            
             <ul class="footer-links">
               <li><a href="#">会社概要</a></li>
               <li><a href="#">採用情報</a></li>
