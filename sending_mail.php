@@ -11,12 +11,12 @@ $content = $_POST['content'];
 $subject = "ウェブサイトからの問い合わせ";
 $body = "以下の内容でお問い合わせがありました。\n\n";
 $body .= "メールアドレス： " . $mail . "\n";
-$body = "氏名： " . $sei . " " . $mei . "\n";
+$body .= "氏名： " . $sei . " " . $mei . "\n";
 $body .= "性別： " . $gender . "\n";
 $body .= "問い合わせ内容：\n" . $content;
 
 // 送信先のメールアドレス
-$to = "info@alpharastest.shop"; // ここに送信先のメールアドレスを入力してください
+$to = $mail; // ここに送信先のメールアドレスを入力してください
 
 // ヘッダー情報
 $headers = "From: info@alpharastest.shop \n"; // ここに送信元のアドレスを入力してください
@@ -24,9 +24,15 @@ $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 // メール送信
 if (mb_send_mail($to, $subject, $body, $headers)) {
-    echo "メールが正常に送信されました。";
+    echo "メールが正常に送信されました。\n リダイレクトします。";
+    // 送信後のリダイレクトやメッセージ表示などの処理をここに追加できます
+    header("Location: index.html"); // 送信後にリダイレクト
+    exit(); 
 } else {
     echo "メールの送信に失敗しました。";
+    // エラーメッセージの表示やログの記録などの処理をここに追加できます
+    // 例: header("Location: error_page.html"); // エラーページへリダイレクト
+    // exit();  
 }
 
 ?>
