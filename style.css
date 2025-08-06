@@ -35,7 +35,13 @@
     margin-top: 15px;
     
   }
-  
+  .gender-item
+    {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 5px;
+    }
   .landing-page .text-wrapper {
     position: relative;
     width: fit-content;
@@ -89,14 +95,13 @@
     font-size: 48px;
     letter-spacing: -0.96px;
     line-height: normal;
+    margin-bottom: 50px;    
+    text-align: center;
+    margin-top: 20px;
   }
   
-  .landing-page .frame {
-    position: relative;
-    width: 640px;
-    height: 213px;
-    background-color: #081723;
-  }
+  
+  
   
   .landing-page .textarea-field {
     display: flex;
@@ -104,7 +109,7 @@
     width: 529px;
     align-items: flex-start;
     gap: var(--size-space-200);
-    
+    margin-top: 10px;
   }
   
   .landing-page .label {
@@ -125,6 +130,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: auto;
+    gap: var(--size-space-200);
     display: flex;
     margin: -50px 56px 10px;
   }
@@ -171,14 +177,20 @@
     left: 517px;
   }
   
-  .landing-page .input-field {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--size-space-200);
-    position: absolute;
-    top: 26px;
-    left: 57px;
+  .landing-page .name-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2つの列を均等な幅で作成 */
+    gap: 45px; /* 列間のスペース */
+    }
+    .name-item {
+    display: flex;
+    flex-direction: column; /* ラベルと入力欄を縦に並べる */
+    }
+  
+  .landing-page .name .label-2,
+  .landing-page .name .input {
+    /* それぞれの要素が均等な幅を占めるように設定 */
+    flex: 1;
   }
   
   .landing-page .label-2 {
@@ -197,6 +209,7 @@
   .landing-page .input {
     display: flex;
     min-width: 240px;
+    max-width: 521px;
     align-items: center;
     padding: var(--size-space-300) var(--size-space-400) var(--size-space-300)
       var(--size-space-400);
@@ -247,8 +260,9 @@
     left: 346px;
   }
   
-  .landing-page .frame-2 {
-    
+  .landing-page .frame {
+    height: auto;
+    display: grid;
    
   }
   
@@ -261,20 +275,8 @@
     left: 57px;
   }
   
-  .landing-page .text-wrapper-3 {
-    position: relative;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    width: 32px;
-    height: 22px;
-    font-family: var(--body-base-font-family);
-    font-weight: var(--body-base-font-weight);
+  .text-wrapper-3 {
     color: #ffffff;
-    font-size: var(--body-base-font-size);
-    letter-spacing: var(--body-base-letter-spacing);
-    line-height: var(--body-base-line-height);
-    white-space: nowrap;
-    font-style: var(--body-base-font-style);
   }
   
   .landing-page .radio-button {
@@ -343,22 +345,22 @@
     gap: 8px;
     padding: 12px 24px;
     position: absolute;
-    top: 580px;
     left: auto;
     background-color: #2c6088f2;
     border-radius: 8px;
     box-shadow: var(--button-shadow);
   }
 
-  .landing-page .input-field-3{
-    display: flex;
-    justify-content: center;
-  }
+    .submit-button{
+        all: unset;
+        display: flex;
+        justify-content: center; /* 横方向の中央寄せ */    
+     }
   
   .landing-page .text-wrapper-6 {
     position: relative;
     width: fit-content;
-    margin-top: -11.00px;
+    margin-top: -9.00px;
     margin-bottom: -9.00px;
     font-family: "Inter-Medium", Helvetica;
     font-weight: 500;
@@ -500,11 +502,7 @@
     text-align: center;
     font-size: 32px;
     }
-    .landing-page .frame {
-    width: auto;
-    height: auto;
-    padding: 20px;
-    }
+   
     .landing-page .input-field,
     .landing-page .input-field-2 {
     position: static;
@@ -571,7 +569,7 @@
     }
 
     .landing-page .textarea-field{
-        width: 340px;
+        width: 384px;
         min-width: auto;
 
     }
@@ -580,5 +578,9 @@
       width: 100%;
       min-width: unset;
     }
+    .name-container {
+        grid-template-columns: 1fr; /* 画面幅が狭い場合は1列にする */
+        gap: 9px;
+      }
     
 }
