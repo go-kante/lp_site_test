@@ -119,6 +119,15 @@
     line-height: var(--body-base-line-height);
     font-style: var(--body-base-font-style);
   }
+
+  .landing-page .mail-field {  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    display: flex;
+    margin: -50px 56px 10px;
+  }
   
   .landing-page .textarea {
     display: flex;
@@ -239,12 +248,8 @@
   }
   
   .landing-page .frame-2 {
-    display: grid;
-    gap: 8px 16px;
-    padding: 7px 9px 7px 0px;
-    position: absolute;
-    top: 123px;
-    left: 57px;
+    
+   
   }
   
   .landing-page .frame-sex {
