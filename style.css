@@ -443,7 +443,94 @@
         height: 24px;
       }
     /* ここにソーシャルアイコンのスタイルを記述 */
-  
+
+    .close-modal {
+        position: absolute;              /* modalを閉じるボタン */
+        top: 4px;
+        right: 22px;
+        font-size: 40px;
+        color: #060606;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+      
+      .modal p {
+        font-size: 0.85rem;
+        text-align: center;
+        white-space: nowrap; 
+      }
+
+      .modal h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 10px;
+        white-space: nowrap;
+      }
+      
+      .hidden {
+        display: none;            /* hiddenクラスが付与されている場合は表示させないようにする */
+      }
+      
+      .modal {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        color: #081723;
+        background-color: rgb(250, 249, 249);
+        padding: 3rem;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);   /* modalに影を作る */
+        z-index: 1000;           /* z-indexでmodalを一番上に位置させる */
+      }
+      .modal.visible {
+        display: flex;
+      }
+      #modal-content-area p {
+        text-align: left; /* モーダルの内容が多い場合にスクロール可能にする */
+      }
+      #modal-content-area {
+       margin-bottom: 5px;
+       text-align:center;
+      } /* 内容が多い場合にスクロールバーを表示 */
+      
+        .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        }
+
+        .overlay.visible {
+        display: block;
+        }
+
+       .modal-dialog {
+        position: relative;
+        z-index: 1001; e
+       }
+        
+      .button-modal {
+        all: unset;
+        box-sizing: border-box;
+        display: inline-flex;
+        height: 40px;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        padding: 12px 24px;
+        background-color: #141414f2;
+        border-radius: 8px;
+        box-shadow: var(--button-shadow);
+      }
+            
   
   /* レスポンシブデザイン（モバイル対応） */
   @media (max-width: 768px) {

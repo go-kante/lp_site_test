@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
     <div class="landing-page">
@@ -21,7 +22,7 @@
       <div class="div">問い合わせフォーム</div>
      
       
-        <form class="form" action="sending_mail.php" method="post">
+        <form class="form" action="sending_mail.php" id="contactForm" method="post">
            
         <div class="mail-field">
           <div class="label-2">メールアドレス</div>
@@ -62,15 +63,34 @@
       </div>
         
       <div class="submit-button">
-        <button class="button" type="submit"><div class="text-wrapper-6">送信</div></button>
+        <button class="button" type="button" id="open-modal-button"><div class="text-wrapper-6">送信</div></button>
       </div> 
       </form>
           
+      
+
+      <div id="modal-dialog" class="modal hidden">
+        <div class="modal-content">
+          <!-- モーダル-->
+          <button class="close-modal">&times;</button> <!-- モーダルを閉じるボタン -->
+          <h2>送信内容の確認</h2>
+          <p>以下の内容で送信しますか？</p>
+          <div id="modal-content-area">
+            </div>
+            <button id="back-button" class="button-modal">
+            <div class="text-wrapper-3">戻る</div>
+          </button>
+          <button id="send-mail-button" class="button-modal"> 
+            <div class="text-wrapper-3">送信</div>
+          </button>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
     
+      
 
 
-
-
+ 
       <div class="footer">
         <div class="footer-title"> 会社情報</div>
             <hr>
@@ -111,5 +131,6 @@
         </div>
       </div>
     </div>
+    <script src="modal.js"></script>
   </body>
 </html>
