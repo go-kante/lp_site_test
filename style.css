@@ -496,6 +496,11 @@
        margin-bottom: 5px;
        text-align:center;
       } /* 内容が多い場合にスクロールバーを表示 */
+      .modal-buttons{
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* ボタン間のスペース */
+      }
       
         .overlay {
         display: none;
